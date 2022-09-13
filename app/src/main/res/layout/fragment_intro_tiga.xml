@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".fragment.IntroSatuFragment">
+
+
+    <TextView
+        android:id="@+id/txt_title_intro_satu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/tahap_ketiga"
+        android:textColor="@color/gold"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/txt_desc_intro_satu"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/desc_intro_tiga"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:layout_gravity="center"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/intro_tiga"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        />
+
+</LinearLayout>

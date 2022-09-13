@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">FruitDetectorApp</string>
+    <string name="mulai">Mulai</string>
+    <string name="tentang_aplikasi">Tentang Aplikasi</string>
+    <string name="keluar">Keluar</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bantuan_fruit_detection">BANTUAN FRUIT DETECTION</string>
+    <string name="tahap_pertama">Tahap Pertama</string>
+    <string name="desc_intro_satu">Mohon Arahkan Kamera Anda ke Arah Buah-Buahan</string>
+    <string name="title_intro_dua">Tahap Kedua</string>
+    <string name="desc_intro_dua">Buah-buahan akan terdeteksi bila diarahkan ke Kamera Anda.</string>
+    <string name="tahap_ketiga">Tahap Ketiga</string>
+    <string name="desc_intro_tiga">Arahkan Kamera Anda untuk menyesuaikan Buah-buahan yang ingin dideteksi.</string>
+    <string name="tentang_aplikasi_desc">Aplikasi Fruit Detection merupakan sebuah aplikasi untuk memberikan SOLUSI DIGITAL dalam menjawab kebutuhan edukasi atau informasi di era Digital saat ini, dengan menjadi Informasi, Edukasi dan Interaksi yaitu dengan mendeteksi buah - buahan. Pada umumnya semua akan terdeteksi pada aplikasi ini, yaitu Fruit Detection.</string>
+    <string name="tentang_aplikasi_desc2">Fitur-fitur yang ada di Aplikasi ini, yang bermanfaat untuk menunjang informasi dan edukasi pada umumnya.</string>
+    <string name="code">4IA13</string>
+    <string name="author">Rizqi Akbar R.</string>
+    <string name="txt_help">Arahkan Kepada 1 buah agar dapat di proses</string>
+    <string name="txt_fruit">Fruit Detection</string>
+</resources>

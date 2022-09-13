@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet_exit_linear"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:orientation="vertical"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+        <!-- exit the app textview -->
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="00dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="Apakah anda yakin ingin keluar Aplikasi ini?"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginVertical="20dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <!-- No  Text View -->
+            <TextView
+                android:id="@+id/tv_ya"
+                android:layout_width="100dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/shape_button"
+                android:backgroundTint="#343434"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:text="Ya"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+
+            <!-- Yes Text View -->
+            <TextView
+                android:id="@+id/tv_tidak"
+                android:layout_width="120dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="40dp"
+                android:background="@drawable/shape_btn_exit"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:text="Tidak"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

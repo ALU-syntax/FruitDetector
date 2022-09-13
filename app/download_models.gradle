@@ -1,0 +1,24 @@
+//task downloadTestFile(type: Download) {
+//    src 'https://tfhub.dev/tensorflow/lite-model/ssd_mobilenet_v1/1/metadata/2?lite-format=tflite'
+//    dest project.ext.TEST_ASSETS_DIR + '/mobilenetv1.tflite'
+//    overwrite false
+//}
+//
+//task downloadModelFile(type: Download) {
+//    src 'https://tfhub.dev/tensorflow/lite-model/ssd_mobilenet_v1/1/metadata/2?lite-format=tflite'
+//    dest project.ext.ASSET_DIR + '/mobilenetv1.tflite'
+//    overwrite false
+//}
+//
+//task downloadModelFile0(type: Download) {
+//    src 'https://tfhub.dev/tensorflow/lite-model/efficientdet/lite0/detection/metadata/1?lite-format=tflite'
+//    dest project.ext.ASSET_DIR + '/efficientdet-lite0.tflite'
+//    overwrite false
+//}
+
+task donwloadModelFile1(type: Download){
+    src 'https://drive.google.com/uc?export=download&id=13EXBgrSf7JP2d7q7OYrqcv3mH7ch8oLN'
+    dest project.ext.ASSET_DIR + '/model-unquant.tflite'
+    overwrite false
+}
+preBuild.dependsOn  downloadModelFile1
