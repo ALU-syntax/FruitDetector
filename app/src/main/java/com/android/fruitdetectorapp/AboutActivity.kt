@@ -16,11 +16,12 @@ class AboutActivity : AppCompatActivity() {
         binding = ActivityAboutBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
+        //logic btn back
         binding.btnBack.setOnClickListener{
             finish()
         }
 
+        //logic btn for intent instagram
         binding.btnInstagram.setOnClickListener{
             val uri = Uri.parse("https://instagram.com/rizkiakbar13?igshid=YmMyMTA2M2Y")
             try {
@@ -35,6 +36,7 @@ class AboutActivity : AppCompatActivity() {
             }
         }
 
+        //logic btn for intnet github
         binding.btnGithub.setOnClickListener{
             val uri = Uri.parse("http://github.com/rizqiakbarr13")
             Intent(Intent.ACTION_VIEW, uri).apply {

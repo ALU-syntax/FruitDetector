@@ -1,24 +1,27 @@
 package com.android.fruitdetectorapp.fragment
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.res.Configuration
 import android.graphics.Bitmap
 import android.os.Bundle
+import android.text.TextWatcher
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
 import android.widget.Toast
 import androidx.camera.core.*
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.whenResumed
 import androidx.navigation.Navigation
-import com.android.fruitdetectorapp.ObjectDetectorHelper
+import com.android.fruitdetectorapp.CoreActivity
 import com.android.fruitdetectorapp.R
+import com.android.fruitdetectorapp.ResultActivity
 import com.android.fruitdetectorapp.databinding.FragmentCameraBinding
-import org.tensorflow.lite.task.vision.detector.Detection
+import com.android.fruitdetectorapp.util.ObjectDetectorHelper
 import java.util.*
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
@@ -77,6 +80,10 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
         objectDetectorHelper = ObjectDetectorHelper(
             context = requireContext(),
             objectDetectorListener = this)
+
+//        val hasil = objectDetectorHelper.result
+//        CoreActivity().setTextTest(hasil)
+//        (context as CoreActivity).setTextTest(hasil)
 
     }
 
@@ -187,6 +194,32 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
                 imageHeight,
                 imageWidth
             )
+
+
+            for(item in results!!){
+                var hasil = item.categories[0].index
+                (context as CoreActivity).setTextTest(hasil)
+//                (context as ResultActivity).setIndex(hasil)
+
+//                item.categories.isEmpty()
+                when(item.categories.size){
+                    1 -> (context as CoreActivity).enabledButton()
+                    2 -> { results!!.clear()
+                        (context as CoreActivity).disableButton()
+                    }
+                    3 -> (context as CoreActivity).disableButton()
+                    else -> (context as CoreActivity).disableButton()
+                }
+
+//                if (item.categories.size < 2 && item.categories.size != 0){
+//                    (context as CoreActivity).enabledButton()
+//                    fragmentCameraBinding.overlay.invalidate()
+//                } else {
+//                    (context as CoreActivity).disbaleButton()
+//                    fragmentCameraBinding.overlay.invalidate()
+//                }
+
+            }
 
             // Force a redraw
             fragmentCameraBinding.overlay.invalidate()

@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import com.android.fruitdetectorapp.R
 
 class IntroDuaFragment : Fragment() {
+
+    //initialize fragment layout 2
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

@@ -15,18 +15,26 @@ import android.widget.LinearLayout
  */
 class IndicatorLayout : LinearLayout{
 
+    //reference for indicator position
     private var indicatorCount : Int = 0
     private var selectedPosition : Int = 0
 
+    //constructor 1
     constructor(context: Context): super(context)
+
+    //constructor 2
     constructor(context: Context, attrs: AttributeSet): super(context, attrs) {
         initIndicators(context, attrs, 0)
     }
+
+    //constructor 3
     constructor(
         context: Context, attrs: AttributeSet, defStyleAttr: Int
     ): super(context, attrs, defStyleAttr) {
         initIndicators(context, attrs, defStyleAttr)
     }
+
+    //initialize all indicator
     private fun initIndicators(context: Context, attrs: AttributeSet, defStyleAttr: Int) {
         val typedArray = context.obtainStyledAttributes(
             attrs, R.styleable.IndicatorLayout, defStyleAttr, 0)
@@ -37,9 +45,13 @@ class IndicatorLayout : LinearLayout{
         }
         updateIndicators()
     }
+
+    //set position view group / fragment
     private fun px(dpValue: Float): Int {
         return (dpValue * context.resources.displayMetrics.density).toInt()
     }
+
+    //update indicator position
     private fun updateIndicators() {
         removeAllViews()
         for (i in 0 until indicatorCount) {
@@ -53,10 +65,14 @@ class IndicatorLayout : LinearLayout{
             addView(indicator)
         }
     }
+
+    //set indicator position
     fun setIndicatorCount(count: Int) {
         indicatorCount = count
         updateIndicators()
     }
+
+    //get current indicator position
     fun selectCurrentPosition(position: Int) {
         if (position >= 0 && position <= indicatorCount) {
             selectedPosition = position

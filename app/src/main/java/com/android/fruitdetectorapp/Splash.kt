@@ -7,15 +7,16 @@ import android.os.Handler
 import com.android.fruitdetectorapp.databinding.ActivitySplashBinding
 
 class Splash : AppCompatActivity() {
-    private lateinit var binding : ActivitySplashBinding
 
+    //initialize binding layout
+    private lateinit var binding : ActivitySplashBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
+        //splash screen delay
         Handler().postDelayed({
             Intent(this, MainActivity::class.java).apply {
                 startActivity(this)

@@ -5,13 +5,8 @@ import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
 
-/**
- * Created by Ardian Iqbal Yusmartito on 12/09/22
- * Github : https://github.com/ALU-syntax
- * Twitter : https://twitter.com/mengkerebe
- * Instagram : https://www.instagram.com/ardian_iqbal_
- * LinkedIn : https://www.linkedin.com/in/ardianiqbal
- */
+
+//adapter for slider intro activity
 class IntroSliderAdapter(fa : FragmentActivity) : FragmentStateAdapter(fa){
 
     private val fragmentList = ArrayList<Fragment>()

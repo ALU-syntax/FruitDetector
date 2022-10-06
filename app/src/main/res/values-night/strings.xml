@@ -16,4 +16,5 @@
     <string name="author">Rizqi Akbar R.</string>
     <string name="txt_help">Arahkan Kepada 1 buah agar dapat di proses</string>
     <string name="txt_fruit">Fruit Detection</string>
+    <string name="terdeteksi">Terdeteksi</string>
 </resources>

@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import com.android.fruitdetectorapp.R
 
 class IntroTigaFragment : Fragment() {
+
+    //initialize fragment layout 3
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

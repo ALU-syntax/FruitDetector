@@ -26,17 +26,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/iv_logomain"
+        android:layout_marginHorizontal="30dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/shape_button"
-        android:layout_marginHorizontal="30dp"
         android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
-        android:text="@string/mulai"
-        android:textColor="@color/white"
-        android:textAlignment="center"
-        app:iconSize="0dp"
-        app:iconPadding="0dp"
         android:elevation="6dp"
-        />
+        android:text="@string/mulai"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:iconPadding="0dp"
+        app:iconSize="0dp" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_tentang_aplikasi"
@@ -63,29 +62,39 @@
         android:elevation="6dp"
         />
 
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/btn_instagram"
+    <LinearLayout
+        android:id="@+id/layout_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btn_keluar"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/ic_ig"
-        android:background="@android:color/transparent"
-        android:layout_marginLeft="150dp"
-        android:elevation="6dp"
-        />
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true">
 
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/btn_github"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/btn_instagram"
-        android:layout_below="@+id/btn_keluar"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:src="@drawable/ic_github"
-        android:background="@android:color/transparent"
-        android:elevation="6dp"
-        />
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btn_instagram"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_keluar"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_ig"
+            android:background="@android:color/transparent"
+            android:elevation="6dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btn_github"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/btn_instagram"
+            android:layout_below="@+id/btn_keluar"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_github"
+            android:background="@android:color/transparent"
+            android:elevation="6dp"
+            />
+
+
+    </LinearLayout>
 
 </RelativeLayout>

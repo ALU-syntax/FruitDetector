@@ -10,6 +10,7 @@ import android.widget.TextView
 import com.android.fruitdetectorapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    //initialize binding layout
     private lateinit var binding : ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -59,6 +60,7 @@ class MainActivity : AppCompatActivity() {
         customExitDialog()
     }
 
+    //create exit dialog
     fun customExitDialog() {
         // creating custom dialog
         val dialog = Dialog(this@MainActivity)

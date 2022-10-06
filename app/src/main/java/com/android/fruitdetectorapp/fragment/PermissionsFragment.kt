@@ -15,6 +15,7 @@ import com.android.fruitdetectorapp.R
 
 private val PERMISSIONS_REQUIRED = arrayOf(Manifest.permission.CAMERA)
 
+//handler for permission camera access
 class PermissionsFragment : Fragment() {
 
     private val requestPermissionLauncher =
